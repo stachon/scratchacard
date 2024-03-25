@@ -15,13 +15,17 @@ struct HomeView: View {
             VStack(spacing: 24) {
                 Text("Scratch Card State: \(viewModel.cardState.stateText)")
 
-                Button("Go to Scratch Screen") {
-                    // Navigation logic to ScratchScreen
-                }
+                NavigationLink(destination: {
+                    ScratchView(viewModel: viewModel.makeScratchViewModel())
+                }, label: {
+                    Text("Go to Scratching Screen")
+                })
 
-                Button("Go to Activation Screen") {
-                    // Navigation logic to ActivationScreen
-                }
+                NavigationLink(destination: {
+                    ActivateView(viewModel: viewModel.makeActivateViewModel())
+                }, label: {
+                    Text("Go to Activation Screen")
+                })
             }
         }
     }

@@ -22,20 +22,16 @@ final class ScratchacardUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    func testScratch() throws {
         let app = XCUIApplication()
         app.launch()
+        app.buttons["Go to Scratching Screen"].tap()
+        app.buttons["Scratch it!"].tap()
 
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+        let searchText = "Card State: Scratched"
+        let predicate = NSPredicate(format: "label CONTAINS[c] %@", searchText)
 
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
+        XCTAssert(app.staticTexts.matching(predicate).firstMatch.waitForExistence(timeout: 5))
     }
 }
+

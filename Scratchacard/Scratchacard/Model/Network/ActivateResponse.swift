@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+struct ActivateResponse: Codable {
+    let ios: String
+}

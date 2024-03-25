@@ -7,13 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A801F73D2BB180F300FCC6B7 /* ActivateCardUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A801F73C2BB180F300FCC6B7 /* ActivateCardUseCase.swift */; };
+		A801F73F2BB189A000FCC6B7 /* MockScratchCardAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A801F73E2BB189A000FCC6B7 /* MockScratchCardAPI.swift */; };
+		A801F7412BB18A5600FCC6B7 /* ActivateCardUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A801F7402BB18A5600FCC6B7 /* ActivateCardUseCaseTests.swift */; };
+		A801F7432BB1946B00FCC6B7 /* ScratchCardUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A801F7422BB1946B00FCC6B7 /* ScratchCardUseCase.swift */; };
+		A801F7472BB1997F00FCC6B7 /* ActivateCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A801F7462BB1997F00FCC6B7 /* ActivateCardViewModel.swift */; };
+		A801F7492BB1998E00FCC6B7 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A801F7482BB1998E00FCC6B7 /* HomeViewModel.swift */; };
+		A801F74C2BB19B8900FCC6B7 /* DefaultAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A801F74B2BB19B8900FCC6B7 /* DefaultAssembly.swift */; };
+		A801F74F2BB19FBE00FCC6B7 /* ScratchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A801F74E2BB19FBD00FCC6B7 /* ScratchView.swift */; };
+		A801F7512BB1A3E600FCC6B7 /* ActivateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A801F7502BB1A3E600FCC6B7 /* ActivateView.swift */; };
+		A801F7532BB1A5EC00FCC6B7 /* View+errorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A801F7522BB1A5EC00FCC6B7 /* View+errorAlert.swift */; };
+		A801F7562BB1B96400FCC6B7 /* ScratchCardUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A801F7552BB1B96400FCC6B7 /* ScratchCardUseCaseTests.swift */; };
+		A801F7592BB1BB2700FCC6B7 /* MockScratchCardUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A801F7582BB1BB2700FCC6B7 /* MockScratchCardUseCase.swift */; };
+		A801F75C2BB1C0DB00FCC6B7 /* ActivateCardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A801F75B2BB1C0DB00FCC6B7 /* ActivateCardViewModelTests.swift */; };
 		A841A2C12BB175310018563B /* ScratchacardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841A2C02BB175310018563B /* ScratchacardApp.swift */; };
-		A841A2C32BB175310018563B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841A2C22BB175310018563B /* ContentView.swift */; };
+		A841A2C32BB175310018563B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841A2C22BB175310018563B /* HomeView.swift */; };
 		A841A2C52BB175330018563B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A841A2C42BB175330018563B /* Assets.xcassets */; };
 		A841A2C82BB175330018563B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A841A2C72BB175330018563B /* Preview Assets.xcassets */; };
-		A841A2D22BB175340018563B /* ScratchacardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841A2D12BB175340018563B /* ScratchacardTests.swift */; };
 		A841A2DC2BB175340018563B /* ScratchacardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841A2DB2BB175340018563B /* ScratchacardUITests.swift */; };
 		A841A2DE2BB175340018563B /* ScratchacardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841A2DD2BB175340018563B /* ScratchacardUITestsLaunchTests.swift */; };
+		A841A2EC2BB1758D0018563B /* ScratchCardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841A2EB2BB1758D0018563B /* ScratchCardState.swift */; };
+		A841A2EF2BB175CA0018563B /* ScratchCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841A2EE2BB175CA0018563B /* ScratchCardViewModel.swift */; };
+		A841A2F22BB1765D0018563B /* ScratchCardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841A2F12BB1765D0018563B /* ScratchCardViewModelTests.swift */; };
+		A841A2F52BB177630018563B /* ScratchCardAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841A2F42BB177630018563B /* ScratchCardAPI.swift */; };
+		A841A2F72BB179230018563B /* ScratchCardError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841A2F62BB179230018563B /* ScratchCardError.swift */; };
+		A841A2FA2BB17A010018563B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A841A2F92BB17A010018563B /* Alamofire */; };
+		A841A2FC2BB17B0F0018563B /* ActivateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841A2FB2BB17B0F0018563B /* ActivateResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,16 +53,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A801F73C2BB180F300FCC6B7 /* ActivateCardUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateCardUseCase.swift; sourceTree = "<group>"; };
+		A801F73E2BB189A000FCC6B7 /* MockScratchCardAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockScratchCardAPI.swift; sourceTree = "<group>"; };
+		A801F7402BB18A5600FCC6B7 /* ActivateCardUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateCardUseCaseTests.swift; sourceTree = "<group>"; };
+		A801F7422BB1946B00FCC6B7 /* ScratchCardUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchCardUseCase.swift; sourceTree = "<group>"; };
+		A801F7462BB1997F00FCC6B7 /* ActivateCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateCardViewModel.swift; sourceTree = "<group>"; };
+		A801F7482BB1998E00FCC6B7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A801F74B2BB19B8900FCC6B7 /* DefaultAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAssembly.swift; sourceTree = "<group>"; };
+		A801F74E2BB19FBD00FCC6B7 /* ScratchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchView.swift; sourceTree = "<group>"; };
+		A801F7502BB1A3E600FCC6B7 /* ActivateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateView.swift; sourceTree = "<group>"; };
+		A801F7522BB1A5EC00FCC6B7 /* View+errorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+errorAlert.swift"; sourceTree = "<group>"; };
+		A801F7552BB1B96400FCC6B7 /* ScratchCardUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchCardUseCaseTests.swift; sourceTree = "<group>"; };
+		A801F7582BB1BB2700FCC6B7 /* MockScratchCardUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockScratchCardUseCase.swift; sourceTree = "<group>"; };
+		A801F75B2BB1C0DB00FCC6B7 /* ActivateCardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateCardViewModelTests.swift; sourceTree = "<group>"; };
 		A841A2BD2BB175310018563B /* Scratchacard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scratchacard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A841A2C02BB175310018563B /* ScratchacardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchacardApp.swift; sourceTree = "<group>"; };
-		A841A2C22BB175310018563B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A841A2C22BB175310018563B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A841A2C42BB175330018563B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A841A2C72BB175330018563B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A841A2CD2BB175340018563B /* ScratchacardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScratchacardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A841A2D12BB175340018563B /* ScratchacardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchacardTests.swift; sourceTree = "<group>"; };
 		A841A2D72BB175340018563B /* ScratchacardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScratchacardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A841A2DB2BB175340018563B /* ScratchacardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchacardUITests.swift; sourceTree = "<group>"; };
 		A841A2DD2BB175340018563B /* ScratchacardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchacardUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A841A2EB2BB1758D0018563B /* ScratchCardState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchCardState.swift; sourceTree = "<group>"; };
+		A841A2EE2BB175CA0018563B /* ScratchCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchCardViewModel.swift; sourceTree = "<group>"; };
+		A841A2F12BB1765D0018563B /* ScratchCardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchCardViewModelTests.swift; sourceTree = "<group>"; };
+		A841A2F42BB177630018563B /* ScratchCardAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchCardAPI.swift; sourceTree = "<group>"; };
+		A841A2F62BB179230018563B /* ScratchCardError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchCardError.swift; sourceTree = "<group>"; };
+		A841A2FB2BB17B0F0018563B /* ActivateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A841A2FA2BB17A010018563B /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +109,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A801F73A2BB1802A00FCC6B7 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A801F73E2BB189A000FCC6B7 /* MockScratchCardAPI.swift */,
+				A801F7582BB1BB2700FCC6B7 /* MockScratchCardUseCase.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		A801F73B2BB180C400FCC6B7 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				A801F73C2BB180F300FCC6B7 /* ActivateCardUseCase.swift */,
+				A801F7422BB1946B00FCC6B7 /* ScratchCardUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		A801F74A2BB19B7900FCC6B7 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				A801F74B2BB19B8900FCC6B7 /* DefaultAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		A801F74D2BB19F8500FCC6B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A841A2C22BB175310018563B /* HomeView.swift */,
+				A801F74E2BB19FBD00FCC6B7 /* ScratchView.swift */,
+				A801F7502BB1A3E600FCC6B7 /* ActivateView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A801F7542BB1A5F100FCC6B7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A801F7522BB1A5EC00FCC6B7 /* View+errorAlert.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A801F7572BB1B96A00FCC6B7 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				A801F7402BB18A5600FCC6B7 /* ActivateCardUseCaseTests.swift */,
+				A801F7552BB1B96400FCC6B7 /* ScratchCardUseCaseTests.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		A801F75A2BB1C0C700FCC6B7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A841A2F12BB1765D0018563B /* ScratchCardViewModelTests.swift */,
+				A801F75B2BB1C0DB00FCC6B7 /* ActivateCardViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		A841A2B42BB175310018563B = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +194,14 @@
 		A841A2BF2BB175310018563B /* Scratchacard */ = {
 			isa = PBXGroup;
 			children = (
+				A801F7542BB1A5F100FCC6B7 /* Extensions */,
+				A801F74D2BB19F8500FCC6B7 /* View */,
+				A801F74A2BB19B7900FCC6B7 /* Assembly */,
+				A801F73B2BB180C400FCC6B7 /* UseCases */,
+				A841A2F32BB1774F0018563B /* Services */,
+				A841A2ED2BB175BA0018563B /* ViewModel */,
+				A841A2EA2BB1756F0018563B /* Model */,
 				A841A2C02BB175310018563B /* ScratchacardApp.swift */,
-				A841A2C22BB175310018563B /* ContentView.swift */,
 				A841A2C42BB175330018563B /* Assets.xcassets */,
 				A841A2C62BB175330018563B /* Preview Content */,
 			);
@@ -113,7 +219,9 @@
 		A841A2D02BB175340018563B /* ScratchacardTests */ = {
 			isa = PBXGroup;
 			children = (
-				A841A2D12BB175340018563B /* ScratchacardTests.swift */,
+				A801F75A2BB1C0C700FCC6B7 /* ViewModel */,
+				A801F7572BB1B96A00FCC6B7 /* UseCase */,
+				A801F73A2BB1802A00FCC6B7 /* Mocks */,
 			);
 			path = ScratchacardTests;
 			sourceTree = "<group>";
@@ -125,6 +233,42 @@
 				A841A2DD2BB175340018563B /* ScratchacardUITestsLaunchTests.swift */,
 			);
 			path = ScratchacardUITests;
+			sourceTree = "<group>";
+		};
+		A841A2EA2BB1756F0018563B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A841A2F02BB1760C0018563B /* Network */,
+				A841A2EB2BB1758D0018563B /* ScratchCardState.swift */,
+				A841A2F62BB179230018563B /* ScratchCardError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A841A2ED2BB175BA0018563B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A801F7462BB1997F00FCC6B7 /* ActivateCardViewModel.swift */,
+				A841A2EE2BB175CA0018563B /* ScratchCardViewModel.swift */,
+				A801F7482BB1998E00FCC6B7 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A841A2F02BB1760C0018563B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A841A2FB2BB17B0F0018563B /* ActivateResponse.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A841A2F32BB1774F0018563B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A841A2F42BB177630018563B /* ScratchCardAPI.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +287,9 @@
 			dependencies = (
 			);
 			name = Scratchacard;
+			packageProductDependencies = (
+				A841A2F92BB17A010018563B /* Alamofire */,
+			);
 			productName = Scratchacard;
 			productReference = A841A2BD2BB175310018563B /* Scratchacard.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +362,9 @@
 				Base,
 			);
 			mainGroup = A841A2B42BB175310018563B;
+			packageReferences = (
+				A841A2F82BB17A000018563B /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = A841A2BE2BB175310018563B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +407,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A841A2C32BB175310018563B /* ContentView.swift in Sources */,
+				A841A2EC2BB1758D0018563B /* ScratchCardState.swift in Sources */,
+				A801F7532BB1A5EC00FCC6B7 /* View+errorAlert.swift in Sources */,
+				A841A2C32BB175310018563B /* HomeView.swift in Sources */,
+				A841A2FC2BB17B0F0018563B /* ActivateResponse.swift in Sources */,
+				A841A2F52BB177630018563B /* ScratchCardAPI.swift in Sources */,
 				A841A2C12BB175310018563B /* ScratchacardApp.swift in Sources */,
+				A801F7512BB1A3E600FCC6B7 /* ActivateView.swift in Sources */,
+				A841A2EF2BB175CA0018563B /* ScratchCardViewModel.swift in Sources */,
+				A801F7492BB1998E00FCC6B7 /* HomeViewModel.swift in Sources */,
+				A801F7472BB1997F00FCC6B7 /* ActivateCardViewModel.swift in Sources */,
+				A801F74C2BB19B8900FCC6B7 /* DefaultAssembly.swift in Sources */,
+				A801F7432BB1946B00FCC6B7 /* ScratchCardUseCase.swift in Sources */,
+				A801F73D2BB180F300FCC6B7 /* ActivateCardUseCase.swift in Sources */,
+				A841A2F72BB179230018563B /* ScratchCardError.swift in Sources */,
+				A801F74F2BB19FBE00FCC6B7 /* ScratchView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +429,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A841A2D22BB175340018563B /* ScratchacardTests.swift in Sources */,
+				A801F73F2BB189A000FCC6B7 /* MockScratchCardAPI.swift in Sources */,
+				A801F7592BB1BB2700FCC6B7 /* MockScratchCardUseCase.swift in Sources */,
+				A801F7562BB1B96400FCC6B7 /* ScratchCardUseCaseTests.swift in Sources */,
+				A801F75C2BB1C0DB00FCC6B7 /* ActivateCardViewModelTests.swift in Sources */,
+				A841A2F22BB1765D0018563B /* ScratchCardViewModelTests.swift in Sources */,
+				A801F7412BB18A5600FCC6B7 /* ActivateCardUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +756,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A841A2F82BB17A000018563B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A841A2F92BB17A010018563B /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A841A2F82BB17A000018563B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A841A2B52BB175310018563B /* Project object */;
 }

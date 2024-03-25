@@ -7,40 +7,30 @@
 
 import Foundation
 
-class ScratchCardViewModel: ObservableObject {
+class HomeViewModel: ObservableObject {
 
     struct Dependencies {
-        let activateCard: ActivateCardUseCase
+        let assembly: Assembly
     }
-
     let deps: Dependencies
 
     @Published var cardState: ScratchCardState = .unscratched
-    @Published var error: Error?
 
     init(deps: Dependencies) {
         self.deps = deps
     }
-
-    func scratchCard() async {
-        do {
-            try await Task.sleep(for: .seconds(2), tolerance: .zero)
-            self.cardState = .scratched(code: UUID().uuidString)
-        } catch {
-            self.error = error
-        }
+    
+    func makeScratchViewModel() -> ScratchCardViewModel {
+        let flow = ScratchCardFlow(onSuccess: { [weak self] state in
+            self?.cardState = state
+        })
+        return deps.assembly.makeScratchCardViewModel(cardState: cardState, flow: flow)
     }
 
-    func activateCard(code: String) async throws {
-        do {
-            let result = try await deps.activateCard.activateCard(code: code)
-            if result {
-                cardState = .activated
-            } else {
-                error = ScratchCardError.activationFailed
-            }
-        } catch {
-            self.error = error
-        }
+    func makeActivateViewModel() -> ActivateCardViewModel {
+        let flow = ActivateCardFlow(onSuccess: { [weak self] state in
+            self?.cardState = state
+        })
+        return deps.assembly.makeActivateCardViewModel(cardState: cardState, flow: flow)
     }
 }

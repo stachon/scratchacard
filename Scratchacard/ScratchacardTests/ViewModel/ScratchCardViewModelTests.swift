@@ -40,6 +40,7 @@ final class ScratchCardViewModelTests: XCTestCase {
 
         XCTAssert(!viewModel.isProgressing)
         XCTAssertNil(viewModel.error)
+        XCTAssert(onSuccessState == viewModel.cardState)
     }
 
     func test__invalidInitialState() async throws {
@@ -78,6 +79,35 @@ final class ScratchCardViewModelTests: XCTestCase {
 
         XCTAssert(!viewModel.isProgressing)
         XCTAssertNotNil(viewModel.error)
+    }
+
+    func test__dismissWillCancelOperation() async throws {
+        let useCase = MockScratchCardUseCase(delay: .seconds(2), result: "123", throwError: false)
+        viewModel = ScratchCardViewModel(cardState: .unscratched, flow: makeFlow(), deps: .init(scratchCard: useCase))
+
+        let expectation = expectation(description: "Task finished")
+
+        Task {
+            await viewModel.scratchCard()
+            expectation.fulfill()
+        }
+
+        try await Task.sleep(for: .milliseconds(500))
+
+        XCTAssert(viewModel.isProgressing)
+
+        await viewModel.onDisappear()
+
+        await fulfillment(of: [expectation])
+
+        switch viewModel.cardState {
+        case .unscratched:
+            break
+        default:
+            XCTFail("Invalid card state")
+        }
+
+        XCTAssert(!viewModel.isProgressing)
     }
 }
 

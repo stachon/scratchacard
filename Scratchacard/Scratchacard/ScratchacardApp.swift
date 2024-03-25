@@ -7,11 +7,14 @@
 
 import SwiftUI
 
+let assembly = DefaultAssembly()
+let viewModel = assembly.makeHomeViewModel()
+
 @main
 struct ScratchacardApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView(viewModel: viewModel)
         }
     }
 }

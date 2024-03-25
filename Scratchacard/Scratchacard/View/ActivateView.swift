@@ -8,11 +8,25 @@
 import SwiftUI
 
 struct ActivateView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+    @StateObject var viewModel: ActivateCardViewModel
 
-#Preview {
-    ActivateView()
+    var body: some View {
+        VStack(spacing: 24) {
+            Text("Card State: \(viewModel.cardState.stateText)")
+
+            if viewModel.isProgressing {
+                ProgressView()
+            } else {
+                Button("Activate") {
+                    Task {
+                        await viewModel.activateCard()
+                    }
+                }
+            }
+        }
+        .errorAlert(error: $viewModel.error)
+        .onDisappear {
+            viewModel.onDisappear()
+        }
+    }
 }
